@@ -1,0 +1,444 @@
+/**
+ * ═══════════════════════════════════════════════════════════════
+ * AMN STUDIOS DESIGN SYSTEM
+ * Premium Cybersecurity & Software Studio Visual Identity
+ * ═══════════════════════════════════════════════════════════════
+ * 
+ * BRAND PHILOSOPHY:
+ * Dark cosmic theme with glassmorphism, neon glows, and cinematic motion.
+ * Secure-by-design aesthetic meets modern premium engineering.
+ * 
+ * ═══════════════════════════════════════════════════════════════
+ */
+
+:root {
+  /* ═══════════════════════════════════════════════════════════════
+   * COLOR TOKENS
+   * ═══════════════════════════════════════════════════════════════
+   * Base: Deep cosmic blacks and subtle blues
+   * Accent: Violet/Purple (security), Cyan (tech), Pink (creative)
+   */
+  
+  /* Base Colors */
+  --amn-space-black: #070712;
+  --amn-void-deep: #0a0a1a;
+  --amn-void-medium: #0f0f23;
+  --amn-void-light: #16162e;
+  --amn-void-lighter: #1d1d3a;
+  
+  /* Primary Accent - Violet (Security, Trust) */
+  --amn-violet-50: #f5f3ff;
+  --amn-violet-100: #ede9fe;
+  --amn-violet-200: #ddd6fe;
+  --amn-violet-300: #c4b5fd;
+  --amn-violet-400: #a78bfa;
+  --amn-violet-500: #8b5cf6;
+  --amn-violet-600: #7c3aed;
+  --amn-violet-700: #6d28d9;
+  --amn-violet-800: #5b21b6;
+  --amn-violet-900: #4c1d95;
+  
+  /* Secondary Accent - Cyan (Technology) */
+  --amn-cyan-50: #ecfeff;
+  --amn-cyan-100: #cffafe;
+  --amn-cyan-200: #a5f3fc;
+  --amn-cyan-300: #67e8f9;
+  --amn-cyan-400: #22d3ee;
+  --amn-cyan-500: #06b6d4;
+  --amn-cyan-600: #0891b2;
+  --amn-cyan-700: #0e7490;
+  --amn-cyan-800: #155e75;
+  --amn-cyan-900: #164e63;
+  
+  /* Tertiary Accent - Pink (Creative) */
+  --amn-pink-50: #fdf2f8;
+  --amn-pink-100: #fce7f3;
+  --amn-pink-200: #fbcfe8;
+  --amn-pink-300: #f9a8d4;
+  --amn-pink-400: #f472b6;
+  --amn-pink-500: #ec4899;
+  --amn-pink-600: #db2777;
+  --amn-pink-700: #be185d;
+  --amn-pink-800: #9d174d;
+  --amn-pink-900: #831843;
+  
+  /* Semantic Colors */
+  --amn-success: #10b981;
+  --amn-warning: #f59e0b;
+  --amn-error: #ef4444;
+  --amn-info: var(--amn-cyan-400);
+  
+  /* Glass & Blur */
+  --amn-glass-bg: rgba(255, 255, 255, 0.03);
+  --amn-glass-bg-hover: rgba(255, 255, 255, 0.06);
+  --amn-glass-bg-strong: rgba(255, 255, 255, 0.08);
+  --amn-glass-border: rgba(255, 255, 255, 0.1);
+  --amn-glass-border-hover: rgba(255, 255, 255, 0.2);
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * GRADIENTS
+   * ═══════════════════════════════════════════════════════════════
+   * Usage: background: var(--amn-gradient-cosmic);
+   */
+  
+  --amn-gradient-cosmic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  --amn-gradient-cyber: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  --amn-gradient-neon: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #06b6d4 100%);
+  --amn-gradient-midnight: linear-gradient(180deg, #0a0a1a 0%, #16162e 100%);
+  --amn-gradient-aurora: linear-gradient(135deg, #667eea 0%, #06b6d4 50%, #f093fb 100%);
+  --amn-gradient-secure: linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #a78bfa 100%);
+  --amn-gradient-glow: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+  
+  /* Animated Gradient (for border spin) */
+  --amn-gradient-border: conic-gradient(from 180deg at 50% 50%, 
+    var(--amn-violet-500) 0deg, 
+    var(--amn-cyan-400) 120deg, 
+    var(--amn-pink-500) 240deg, 
+    var(--amn-violet-500) 360deg);
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * SHADOWS & GLOWS
+   * ═══════════════════════════════════════════════════════════════
+   * Usage: box-shadow: var(--amn-glow-violet-md);
+   */
+  
+  /* Violet Glows */
+  --amn-glow-violet-sm: 0 0 10px rgba(139, 92, 246, 0.3);
+  --amn-glow-violet-md: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+  --amn-glow-violet-lg: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.3), 0 0 90px rgba(139, 92, 246, 0.1);
+  
+  /* Cyan Glows */
+  --amn-glow-cyan-sm: 0 0 10px rgba(34, 211, 238, 0.3);
+  --amn-glow-cyan-md: 0 0 20px rgba(34, 211, 238, 0.4), 0 0 40px rgba(34, 211, 238, 0.2);
+  --amn-glow-cyan-lg: 0 0 30px rgba(34, 211, 238, 0.5), 0 0 60px rgba(34, 211, 238, 0.3);
+  
+  /* Pink Glows */
+  --amn-glow-pink-sm: 0 0 10px rgba(236, 72, 153, 0.3);
+  --amn-glow-pink-md: 0 0 20px rgba(236, 72, 153, 0.4), 0 0 40px rgba(236, 72, 153, 0.2);
+  --amn-glow-pink-lg: 0 0 30px rgba(236, 72, 153, 0.5), 0 0 60px rgba(236, 72, 153, 0.3);
+  
+  /* Multi-color Glows */
+  --amn-glow-neon: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(34, 211, 238, 0.2), 0 0 60px rgba(236, 72, 153, 0.1);
+  
+  /* Glass Shadows */
+  --amn-shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --amn-shadow-glass-hover: 0 12px 48px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * TYPOGRAPHY
+   * ═══════════════════════════════════════════════════════════════
+   * Font Families:
+   * - Outfit: Premium Latin sans-serif
+   * - Tajawal: Arabic sans-serif
+   * - Press Start 2P: Pixel/retro accent font
+   */
+  
+  --amn-font-primary: 'Outfit', 'Tajawal', system-ui, -apple-system, sans-serif;
+  --amn-font-arabic: 'Tajawal', sans-serif;
+  --amn-font-pixel: 'Press Start 2P', monospace;
+  --amn-font-mono: 'Fira Code', 'Consolas', monospace;
+  
+  /* Font Sizes */
+  --amn-text-xs: 0.75rem;      /* 12px */
+  --amn-text-sm: 0.875rem;     /* 14px */
+  --amn-text-base: 1rem;       /* 16px */
+  --amn-text-lg: 1.125rem;     /* 18px */
+  --amn-text-xl: 1.25rem;      /* 20px */
+  --amn-text-2xl: 1.5rem;      /* 24px */
+  --amn-text-3xl: 1.875rem;    /* 30px */
+  --amn-text-4xl: 2.25rem;     /* 36px */
+  --amn-text-5xl: 3rem;        /* 48px */
+  --amn-text-6xl: 3.75rem;     /* 60px */
+  --amn-text-7xl: 4.5rem;      /* 72px */
+  --amn-text-8xl: 6rem;        /* 96px */
+  
+  /* Line Heights */
+  --amn-leading-tight: 1.2;
+  --amn-leading-normal: 1.5;
+  --amn-leading-relaxed: 1.75;
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * SPACING SCALE
+   * ═══════════════════════════════════════════════════════════════
+   * Usage: padding: var(--amn-space-4);
+   */
+  
+  --amn-space-1: 0.25rem;   /* 4px */
+  --amn-space-2: 0.5rem;    /* 8px */
+  --amn-space-3: 0.75rem;   /* 12px */
+  --amn-space-4: 1rem;      /* 16px */
+  --amn-space-5: 1.25rem;   /* 20px */
+  --amn-space-6: 1.5rem;    /* 24px */
+  --amn-space-8: 2rem;      /* 32px */
+  --amn-space-10: 2.5rem;   /* 40px */
+  --amn-space-12: 3rem;     /* 48px */
+  --amn-space-16: 4rem;     /* 64px */
+  --amn-space-20: 5rem;     /* 80px */
+  --amn-space-24: 6rem;     /* 96px */
+  --amn-space-32: 8rem;     /* 128px */
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * BORDER RADIUS SCALE
+   * ═══════════════════════════════════════════════════════════════
+   */
+  
+  --amn-radius-sm: 0.375rem;   /* 6px */
+  --amn-radius-md: 0.5rem;     /* 8px */
+  --amn-radius-lg: 0.75rem;    /* 12px */
+  --amn-radius-xl: 1rem;       /* 16px */
+  --amn-radius-2xl: 1.5rem;    /* 24px */
+  --amn-radius-3xl: 2rem;      /* 32px */
+  --amn-radius-full: 9999px;
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * MOTION TOKENS
+   * ═══════════════════════════════════════════════════════════════
+   * Timing: Use these durations for consistency
+   * Easing: Premium cubic-bezier curves
+   */
+  
+  /* Durations */
+  --amn-duration-instant: 100ms;
+  --amn-duration-fast: 200ms;
+  --amn-duration-normal: 300ms;
+  --amn-duration-slow: 500ms;
+  --amn-duration-slower: 700ms;
+  --amn-duration-slowest: 1000ms;
+  
+  /* Easing Curves */
+  --amn-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --amn-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --amn-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --amn-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --amn-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --amn-ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --amn-ease-cinematic: cubic-bezier(0.8, 0, 0.2, 1);
+  
+  /* Stagger Delays (for animating lists) */
+  --amn-stagger-1: 50ms;
+  --amn-stagger-2: 100ms;
+  --amn-stagger-3: 150ms;
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * BLUR LEVELS
+   * ═══════════════════════════════════════════════════════════════
+   */
+  
+  --amn-blur-sm: 8px;
+  --amn-blur-md: 16px;
+  --amn-blur-lg: 24px;
+  --amn-blur-xl: 40px;
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * Z-INDEX LAYERS
+   * ═══════════════════════════════════════════════════════════════
+   */
+  
+  --amn-z-base: 0;
+  --amn-z-starfield: -1;
+  --amn-z-content: 1;
+  --amn-z-navigation: 100;
+  --amn-z-dropdown: 200;
+  --amn-z-modal: 500;
+  --amn-z-overlay: 400;
+  --amn-z-preloader: 1000;
+  --amn-z-cursor: 9999;
+  
+  /* ═══════════════════════════════════════════════════════════════
+   * ICON STYLES
+   * ═══════════════════════════════════════════════════════════════
+   * Standard stroke widths and sizes for lucide-react icons
+   */
+  
+  --amn-icon-stroke: 2px;
+  --amn-icon-stroke-thick: 2.5px;
+  --amn-icon-size-sm: 16px;
+  --amn-icon-size-md: 20px;
+  --amn-icon-size-lg: 24px;
+  --amn-icon-size-xl: 32px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+ * RTL SUPPORT
+ * ═══════════════════════════════════════════════════════════════
+ * Automatic RTL adjustments when dir="rtl"
+ */
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] body {
+  font-family: var(--amn-font-arabic);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+ * UTILITY CLASSES
+ * ═══════════════════════════════════════════════════════════════
+ */
+
+/* Glass Morphism */
+.amn-glass {
+  background: var(--amn-glass-bg);
+  backdrop-filter: blur(var(--amn-blur-md));
+  border: 1px solid var(--amn-glass-border);
+  box-shadow: var(--amn-shadow-glass);
+}
+
+.amn-glass-strong {
+  background: var(--amn-glass-bg-strong);
+  backdrop-filter: blur(var(--amn-blur-lg));
+  border: 1px solid var(--amn-glass-border);
+  box-shadow: var(--amn-shadow-glass-hover);
+}
+
+/* Gradient Text */
+.amn-gradient-text {
+  background: var(--amn-gradient-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animated Border Spin */
+@keyframes amn-border-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.amn-border-spin {
+  position: relative;
+  overflow: hidden;
+}
+
+.amn-border-spin::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: var(--amn-gradient-border);
+  border-radius: inherit;
+  animation: amn-border-spin 3s linear infinite;
+  z-index: -1;
+}
+
+.amn-border-spin::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--amn-void-deep);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Shimmer Effect */
+@keyframes amn-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.amn-shimmer {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: amn-shimmer 3s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes amn-pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.amn-pulse-glow {
+  animation: amn-pulse-glow 2s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes amn-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.amn-float {
+  animation: amn-float 6s ease-in-out infinite;
+}
+
+/* Glow Hover */
+.amn-glow-hover-violet {
+  transition: box-shadow var(--amn-duration-normal) var(--amn-ease-smooth);
+}
+
+.amn-glow-hover-violet:hover {
+  box-shadow: var(--amn-glow-violet-md);
+}
+
+.amn-glow-hover-cyan {
+  transition: box-shadow var(--amn-duration-normal) var(--amn-ease-smooth);
+}
+
+.amn-glow-hover-cyan:hover {
+  box-shadow: var(--amn-glow-cyan-md);
+}
+
+.amn-glow-hover-pink {
+  transition: box-shadow var(--amn-duration-normal) var(--amn-ease-smooth);
+}
+
+.amn-glow-hover-pink:hover {
+  box-shadow: var(--amn-glow-pink-md);
+}
+
+/* Pixel Font Helper */
+.amn-pixel {
+  font-family: var(--amn-font-pixel);
+  line-height: var(--amn-leading-relaxed);
+  letter-spacing: 0.05em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--amn-void-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--amn-glass-bg-strong);
+  border-radius: var(--amn-radius-full);
+  border: 2px solid var(--amn-void-deep);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amn-violet-600);
+  box-shadow: var(--amn-glow-violet-sm);
+}
+
+/* Selection */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* Global Body Font */
+body {
+  font-family: var(--amn-font-primary);
+}
+
+/* Fade out animation for cursor trail */
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
